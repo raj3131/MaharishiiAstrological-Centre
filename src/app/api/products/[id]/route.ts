@@ -4,10 +4,11 @@ import { getProducts, saveProducts, Product } from '@/lib/db';
 // GET single product
 export async function GET(
     req: Request,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
+    const { id: paramId } = await params;
     const products = getProducts();
-    const id = Number(params.id);
+    const id = Number(paramId);
     const product = products.find((p) => p.id === id);
 
     if (!product) {
@@ -19,12 +20,13 @@ export async function GET(
 // PUT update product
 export async function PUT(
     req: Request,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     try {
+        const { id: paramId } = await params;
         const body = await req.json();
         const products = getProducts();
-        const id = Number(params.id);
+        const id = Number(paramId);
         const index = products.findIndex((p) => p.id === id);
 
         if (index === -1) {
@@ -45,10 +47,11 @@ export async function PUT(
 // DELETE product
 export async function DELETE(
     req: Request,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
+    const { id: paramId } = await params;
     const products = getProducts();
-    const id = Number(params.id);
+    const id = Number(paramId);
     const filteredProducts = products.filter((p) => p.id !== id);
 
     if (products.length === filteredProducts.length) {
