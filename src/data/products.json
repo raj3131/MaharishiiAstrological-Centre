@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Lineage Planetary Yantra",
+        "price": 2499,
+        "image": "https://images.unsplash.com/photo-1629196911514-cfd8d63f585d?q=80&w=600&auto=format&fit=crop",
+        "category": "DNA Remedies",
+        "description": "Align your ancestral planetary energies with this sacred copper Yantra. Specifically energized to balance DNA-inherited karmic registries and bring cosmic protection to your lineage."
+    },
+    {
+        "id": 2,
+        "name": "Ancestral Rudraksha Mala",
+        "price": 3999,
+        "image": "https://images.unsplash.com/photo-1601392631526-9c445a4a5894?q=80&w=600&auto=format&fit=crop",
+        "category": "Karmic Healing",
+        "description": "Authentic Nepali Rudraksha Mala (108 beads). Helps in rhythmic meditation to clear inherited memory patterns and connect your consciousness with ancestral strengths."
+    },
+    {
+        "id": 3,
+        "name": "Heritage Brass Shankh",
+        "price": 7999,
+        "image": "https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?q=80&w=600&auto=format&fit=crop",
+        "category": "Sound Resonance",
+        "description": "High-quality Brass Shankh producing resonant frequencies designed to clear geopathic stress and hereditary energy blocks within your living space."
+    },
+    {
+        "id": 4,
+        "name": "Genetic Protection Ring",
+        "price": 1299,
+        "image": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=600&auto=format&fit=crop",
+        "category": "DNA Shield",
+        "description": "Sri Yantra ring crafted to shield your genetic blueprint from negative psychic influences and attract prosperity across your family lineage."
+    },
+    {
+        "id": 5,
+        "name": "Purification Kalash",
+        "price": 2799,
+        "image": "https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?q=80&w=600&auto=format&fit=crop",
+        "category": "Elemental Fix",
+        "description": "Traditional pure copper Kalash for ancestral water rituals (Tarpanam). Ideal for purifying inherited energy fields and honoring your genetic roots."
+    },
+    {
+        "id": 6,
+        "name": "Karmic Shiva Lingam",
+        "price": 4999,
+        "image": "https://images.unsplash.com/photo-1542880941-13603c36663e?q=80&w=600&auto=format&fit=crop",
+        "category": "Lineage Shakti",
+        "description": "Natural Narmadeshwar Shiva Lingam. A powerful focal point for rituals aimed at dissolving deep-seated ancestral karma and empowering your family's spiritual DNA."
+    }
+]
