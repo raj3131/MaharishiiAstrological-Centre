@@ -54,25 +54,44 @@ export default function Services() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1, duration: 0.5 }}
                                 viewport={{ once: true, margin: "-50px" }}
-                                className="group relative p-8 bg-white border border-[var(--color-3)]/10 rounded-2xl hover:border-[var(--color-3)]/40 transition-all duration-300 overflow-hidden shadow-sm hover:shadow-xl"
+                                className="group relative p-8 group transition-all duration-500"
                             >
-                                {/* Hover Glow - Hidden on mobile for performance */}
-                                <div className="absolute -inset-[100%] bg-gradient-to-br from-transparent via-[var(--color-1)]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl rounded-full translate-x-12 translate-y-12 hidden md:block" />
+                                {/* Manuscript / Parchment Base Layer */}
+                                <div
+                                    className="absolute inset-0 bg-[#F9F5F0] border border-[#D2B48C]/30 shadow-[5px_5px_15px_rgba(45,30,23,0.05),inset_0_0_50px_rgba(210,180,140,0.1)] transition-all duration-500 group-hover:shadow-[10px_10px_30px_rgba(45,30,23,0.1),inset_0_0_60px_rgba(210,180,140,0.15)] overflow-hidden"
+                                    style={{
+                                        clipPath: 'polygon(1% 1%, 98% 0%, 100% 98%, 2% 100%, 0% 50%)',
+                                        backgroundImage: `
+                                            radial-gradient(circle at 20% 30%, rgba(166, 123, 91, 0.02) 0%, transparent 50%),
+                                            url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)' opacity='0.04'/%3E%3C/svg%3E")
+                                        `
+                                    }}
+                                />
 
+                                {/* Decorative Ink Framework */}
+                                <div className="absolute top-4 left-4 right-4 bottom-4 border border-[var(--color-3)]/10 pointer-events-none rounded-sm" />
+
+                                {/* Manuscript Flourishes (Corners) */}
+                                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[var(--color-3)]/20 pointer-events-none" />
+                                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[var(--color-3)]/20 pointer-events-none" />
+
+                                {/* Content Container */}
                                 <div className="relative z-10 flex flex-col gap-4 md:gap-6">
-                                    <div className="w-12 h-12 md:w-16 md:h-16 bg-[var(--color-1)]/20 border border-[var(--color-5)]/50 rounded-full flex items-center justify-center text-[var(--color-3)] group-hover:bg-[var(--color-3)] group-hover:text-white transition-all duration-300 shadow-inner">
+                                    <div className="w-12 h-12 md:w-16 md:h-16 bg-[#EADBC8] border border-[#A67B5B]/40 rounded-full flex items-center justify-center text-[var(--color-3)] group-hover:bg-[var(--color-3)] group-hover:text-[#F8F1E9] transition-all duration-500 shadow-inner">
                                         <Icon className="w-5 h-5 md:w-7 md:h-7" />
                                     </div>
 
                                     <div>
-                                        <h3 className="text-xl md:text-2xl font-serif mb-2 md:mb-3 text-[var(--foreground)] group-hover:text-[var(--color-3)] transition-colors tracking-wide">{service.title}</h3>
-                                        <p className="text-sm md:text-base text-[var(--color-4)] leading-relaxed font-light">
+                                        <h3 className="text-xl md:text-2xl font-serif mb-2 md:mb-3 text-[var(--foreground)] group-hover:text-[var(--color-3)] transition-colors tracking-wide">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-sm md:text-base text-[var(--color-4)] leading-relaxed font-light italic">
                                             {service.desc}
                                         </p>
                                     </div>
 
-                                    <div className="mt-auto pt-2 md:pt-4 flex items-center gap-2 text-[var(--color-3)] text-[10px] md:text-sm uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-all duration-300 font-bold">
-                                        Consult Now <span className="text-base md:text-lg">→</span>
+                                    <div className="mt-auto pt-4 flex items-center gap-2 text-[var(--color-3)] text-[10px] md:text-sm uppercase tracking-[0.2em] font-bold border-t border-[var(--color-3)]/10">
+                                        Seek Guidance <span className="text-base md:text-lg">→</span>
                                     </div>
                                 </div>
                             </motion.div>
