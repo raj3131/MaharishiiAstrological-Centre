@@ -25,7 +25,7 @@ export default function Hero() {
                 />
             </div>
 
-            <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -49,7 +49,7 @@ export default function Hero() {
 
                     {/* Action buttons removed as requested */}
 
-                    <div className="flex items-center gap-8 pt-6 border-t border-[var(--color-2)]/20">
+                    <div className="grid grid-cols-3 md:flex items-center gap-4 md:gap-8 pt-6 border-t border-[var(--color-2)]/20">
                         <div>
                             <h4 className="text-3xl font-bold text-[var(--foreground)] font-serif">10k+</h4>
                             <p className="text-sm text-[var(--color-4)] uppercase tracking-wider">Kundalis Read</p>

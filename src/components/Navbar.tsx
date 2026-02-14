@@ -110,9 +110,9 @@ export default function Navbar() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: "-100%" }}
                             transition={{ type: "tween", duration: 0.4 }}
-                            className="fixed inset-0 bg-[#FFFDF7] z-40 flex flex-col items-center justify-center gap-8 lg:hidden bg-[url('https://www.transparenttextures.com/patterns/cream-pixels.png')]"
+                            className="fixed inset-0 bg-[#FFFDF7] z-[60] flex flex-col items-center justify-center gap-8 lg:hidden bg-[url('https://www.transparenttextures.com/patterns/cream-pixels.png')]"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-[var(--color-1)]/20 pointer-events-none" />
+                            <div className="absolute inset-0 bg-[#FFFDF7] pointer-events-none" />
 
                             {["Services", "Sacred Tools", "Horoscope", "About", "Contact"].map((item, i) => (
                                 <motion.div
