@@ -92,12 +92,13 @@ export default function Navbar() {
                     </a>
                 </div>
 
-                {/* Mobile Toggle */}
+                {/* Mobile Toggle - High Z-Index to stay above overlay */}
                 <motion.button
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    className="lg:hidden z-50 p-2 text-[var(--foreground)] hover:text-[var(--color-3)] transition-colors"
+                    className="lg:hidden z-[70] p-2 text-[var(--foreground)] hover:text-[var(--color-3)] transition-colors"
                     onClick={() => setIsOpen(!isOpen)}
+                    aria-label="Toggle Menu"
                 >
                     {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
                 </motion.button>
@@ -106,53 +107,71 @@ export default function Navbar() {
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.3 }}
-                            className="fixed inset-0 bg-[#FFFDF7] z-[60] flex flex-col items-center justify-center gap-6 lg:hidden"
+                            initial={{ opacity: 0, x: "100%" }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: "100%" }}
+                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                            className="fixed inset-0 bg-[#FFFDF7] z-[60] flex flex-col lg:hidden"
                         >
-                            <div className="absolute inset-0 bg-[#FFFDF7] pointer-events-none" />
-
-                            {["Services", "Products", "Horoscope", "About"].map((item, i) => (
+                            {/* Decorative Background for Menu */}
+                            <div className="absolute inset-0 pointer-events-none opacity-10">
                                 <motion.div
-                                    key={item}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.2 + (0.1 * i) }}
-                                    className="z-10"
-                                >
-                                    <Link
-                                        href={`#${item.toLowerCase().replace(' ', '-')}`}
-                                        onClick={() => setIsOpen(false)}
-                                        className="text-3xl font-bold text-[var(--foreground)] hover:text-[var(--color-3)] transition-colors tracking-widest font-serif"
-                                    >
-                                        {item}
-                                    </Link>
-                                </motion.div>
-                            ))}
+                                    animate={{ rotate: 360 }}
+                                    transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                                    className="absolute -top-[10%] -right-[10%] w-[400px] h-[400px] border border-[var(--color-3)] rounded-full border-dashed"
+                                />
+                                <motion.div
+                                    animate={{ rotate: -360 }}
+                                    transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+                                    className="absolute -bottom-[10%] -left-[10%] w-[300px] h-[300px] border border-[var(--color-2)] rounded-full border-dotted"
+                                />
+                            </div>
 
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.7 }}
-                                className="z-10 mt-4 px-6 w-full"
-                            >
-                                <a
-                                    href="https://wa.me/919876543210"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="btn btn-primary w-full py-4 text-xl flex items-center justify-center gap-3"
-                                >
-                                    <MessageCircle className="w-6 h-6 fill-current" />
-                                    Contact on WhatsApp
-                                </a>
-                            </motion.div>
+                            <div className="flex flex-col h-full p-8 pt-32 overflow-y-auto z-10">
+                                <span className="text-[var(--color-3)] font-bold uppercase tracking-[0.3em] text-xs mb-8 block opacity-60">Directory</span>
 
-                            <div className="mt-8 flex gap-8 z-10 text-[var(--color-4)]">
-                                <Facebook className="w-8 h-8 hover:text-[var(--color-3)] transition-colors" />
-                                <Instagram className="w-8 h-8 hover:text-[var(--color-3)] transition-colors" />
-                                <Twitter className="w-8 h-8 hover:text-[var(--color-3)] transition-colors" />
+                                <div className="flex flex-col gap-8">
+                                    {["Services", "Products", "Horoscope", "About"].map((item, i) => (
+                                        <motion.div
+                                            key={item}
+                                            initial={{ opacity: 0, x: 20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: 0.1 * i }}
+                                        >
+                                            <Link
+                                                href={`#${item.toLowerCase().replace(' ', '-')}`}
+                                                onClick={() => setIsOpen(false)}
+                                                className="text-4xl font-serif font-bold text-[var(--foreground)] hover:text-[var(--color-3)] transition-all tracking-widest flex items-center justify-between group"
+                                            >
+                                                {item}
+                                                <span className="w-8 h-[1px] bg-[var(--color-3)] scale-x-0 group-hover:scale-x-100 transition-transform origin-right" />
+                                            </Link>
+                                        </motion.div>
+                                    ))}
+                                </div>
+
+                                <div className="mt-auto space-y-8">
+                                    <div className="h-[1px] bg-gradient-to-r from-[var(--color-3)] to-transparent opacity-20" />
+
+                                    <div className="space-y-4">
+                                        <span className="text-[var(--color-3)] font-bold uppercase tracking-[0.2em] text-[10px] block opacity-60">Consultation</span>
+                                        <a
+                                            href="https://wa.me/919876543210"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="btn btn-primary w-full py-5 text-lg flex items-center justify-center gap-3 shadow-xl"
+                                        >
+                                            <MessageCircle className="w-6 h-6 fill-current" />
+                                            Direct WhatsApp
+                                        </a>
+                                    </div>
+
+                                    <div className="flex gap-8 justify-center text-[var(--color-4)] pb-4">
+                                        <Facebook className="w-6 h-6 hover:text-[var(--color-3)] transition-colors" />
+                                        <Instagram className="w-6 h-6 hover:text-[var(--color-3)] transition-colors" />
+                                        <Twitter className="w-6 h-6 hover:text-[var(--color-3)] transition-colors" />
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     )}
