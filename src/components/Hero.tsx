@@ -5,7 +5,7 @@ import { Sparkles, Moon } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="min-h-screen pt-24 pb-12 flex items-center justify-center relative bg-[var(--background)] text-[var(--foreground)]">
+        <section className="min-h-screen pt-24 pb-12 flex items-center justify-center relative bg-[var(--background)] text-[var(--foreground)] overflow-hidden">
             {/* Background Wrapper with isolated overflow */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                 {/* Background Texture */}

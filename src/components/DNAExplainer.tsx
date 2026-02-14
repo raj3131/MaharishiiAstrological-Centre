@@ -47,13 +47,13 @@ export default function DNAExplainer() {
                             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-3)]/40 to-transparent" />
                         </motion.div>
 
-                        {/* Decorative floating DNA icon */}
+                        {/* Decorative floating DNA icon - adjusted for mobile overflow */}
                         <motion.div
                             animate={{ y: [0, -20, 0] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -top-10 -right-10 w-24 h-24 bg-white rounded-2xl shadow-xl flex items-center justify-center p-4 border border-[var(--color-1)] z-20"
+                            className="absolute -top-6 -right-4 md:-top-10 md:-right-10 w-16 h-16 md:w-24 md:h-24 bg-white rounded-2xl shadow-xl flex items-center justify-center p-3 md:p-4 border border-[var(--color-1)] z-20"
                         >
-                            <Dna className="w-12 h-12 text-[var(--color-3)]" />
+                            <Dna className="w-8 h-8 md:w-12 md:h-12 text-[var(--color-3)]" />
                         </motion.div>
                     </div>
 
