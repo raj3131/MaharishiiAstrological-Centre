@@ -6,15 +6,21 @@ import 'lenis/dist/lenis.css';
 
 export default function SmoothScroll() {
     useEffect(() => {
+        // Only run Lenis on non-touch devices or when explicitly needed
+        // Mobile browsers have their own high-performance smooth scrolling
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+        if (isTouchDevice) return;
+
         // Initialize Lenis
         const lenis = new Lenis({
-            duration: 1.2, // Duration of scroll animation (higher = slower/smoother)
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing function
-            orientation: 'vertical', // Vertical scrolling
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            orientation: 'vertical',
             gestureOrientation: 'vertical',
-            smoothWheel: true, // Enable smooth scrolling for mouse wheel
-            wheelMultiplier: 1, // Mouse wheel sensitivity
-            touchMultiplier: 2,
+            smoothWheel: true,
+            wheelMultiplier: 1,
+            touchMultiplier: 1.5,
             infinite: false,
         });
 

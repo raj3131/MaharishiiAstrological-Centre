@@ -69,28 +69,28 @@ export default function DNAExplainer() {
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            className="text-4xl md:text-5xl font-serif text-[var(--foreground)] mb-8 leading-tight tracking-widest"
+                            className="text-3xl md:text-5xl font-serif text-[var(--foreground)] mb-6 md:mb-8 leading-tight tracking-widest"
                         >
                             How DNA Astrology <br />
-                            <span className="italic text-[var(--color-3)] tracking-widest">Transforms Your Life</span>
+                            <span className="italic text-[var(--color-3)] tracking-widest text-2xl md:text-5xl">Transforms Your Life</span>
                         </motion.h2>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
                             {features.map((feature, i) => (
                                 <motion.div
                                     key={i}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="flex flex-col gap-4"
+                                    className="flex flex-col gap-3 md:gap-4"
                                 >
-                                    <div className="w-12 h-12 bg-[var(--color-1)]/30 rounded-xl flex items-center justify-center text-[var(--color-3)]">
-                                        <feature.icon className="w-6 h-6" />
+                                    <div className="w-10 h-10 md:w-12 md:h-12 bg-[var(--color-1)]/30 rounded-xl flex items-center justify-center text-[var(--color-3)]">
+                                        <feature.icon className="w-5 h-5 md:w-6 md:h-6" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-[var(--foreground)] tracking-wide">
+                                    <h3 className="text-lg md:text-xl font-bold text-[var(--foreground)] tracking-wide">
                                         {feature.title}
                                     </h3>
-                                    <p className="text-[var(--color-4)] text-sm leading-relaxed">
+                                    <p className="text-[var(--color-4)] text-xs md:text-sm leading-relaxed">
                                         {feature.desc}
                                     </p>
                                 </motion.div>

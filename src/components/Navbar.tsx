@@ -106,11 +106,11 @@ export default function Navbar() {
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
-                            initial={{ opacity: 0, y: "-100%" }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: "-100%" }}
-                            transition={{ type: "tween", duration: 0.4 }}
-                            className="fixed inset-0 bg-[#FFFDF7] z-[60] flex flex-col items-center justify-center gap-8 lg:hidden bg-[url('https://www.transparenttextures.com/patterns/cream-pixels.png')]"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="fixed inset-0 bg-[#FFFDF7] z-[60] flex flex-col items-center justify-center gap-6 lg:hidden"
                         >
                             <div className="absolute inset-0 bg-[#FFFDF7] pointer-events-none" />
 

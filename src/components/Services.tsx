@@ -56,23 +56,23 @@ export default function Services() {
                                 viewport={{ once: true, margin: "-50px" }}
                                 className="group relative p-8 bg-white/80 backdrop-blur-sm border border-[var(--color-2)]/30 rounded-2xl hover:border-[var(--color-3)] transition-all duration-300 overflow-hidden shadow-sm hover:shadow-[0_10px_40px_rgba(202,132,74,0.15)]"
                             >
-                                {/* Hover Glow */}
-                                <div className="absolute -inset-[100%] bg-gradient-to-br from-transparent via-[var(--color-1)]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl rounded-full translate-x-12 translate-y-12" />
+                                {/* Hover Glow - Hidden on mobile for performance */}
+                                <div className="absolute -inset-[100%] bg-gradient-to-br from-transparent via-[var(--color-1)]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl rounded-full translate-x-12 translate-y-12 hidden md:block" />
 
-                                <div className="relative z-10 flex flex-col gap-6">
-                                    <div className="w-16 h-16 bg-[var(--color-1)]/20 border border-[var(--color-5)]/50 rounded-full flex items-center justify-center text-[var(--color-3)] group-hover:bg-[var(--color-3)] group-hover:text-white transition-all duration-300 shadow-inner">
-                                        <Icon className="w-7 h-7" />
+                                <div className="relative z-10 flex flex-col gap-4 md:gap-6">
+                                    <div className="w-12 h-12 md:w-16 md:h-16 bg-[var(--color-1)]/20 border border-[var(--color-5)]/50 rounded-full flex items-center justify-center text-[var(--color-3)] group-hover:bg-[var(--color-3)] group-hover:text-white transition-all duration-300 shadow-inner">
+                                        <Icon className="w-5 h-5 md:w-7 md:h-7" />
                                     </div>
 
                                     <div>
-                                        <h3 className="text-2xl font-serif mb-3 text-[var(--foreground)] group-hover:text-[var(--color-3)] transition-colors tracking-wide">{service.title}</h3>
-                                        <p className="text-[var(--color-4)] leading-relaxed font-light">
+                                        <h3 className="text-xl md:text-2xl font-serif mb-2 md:mb-3 text-[var(--foreground)] group-hover:text-[var(--color-3)] transition-colors tracking-wide">{service.title}</h3>
+                                        <p className="text-sm md:text-base text-[var(--color-4)] leading-relaxed font-light">
                                             {service.desc}
                                         </p>
                                     </div>
 
-                                    <div className="mt-auto pt-4 flex items-center gap-2 text-[var(--color-3)] text-sm uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-all duration-300 font-bold">
-                                        Consult Now <span className="text-lg">→</span>
+                                    <div className="mt-auto pt-2 md:pt-4 flex items-center gap-2 text-[var(--color-3)] text-[10px] md:text-sm uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-all duration-300 font-bold">
+                                        Consult Now <span className="text-base md:text-lg">→</span>
                                     </div>
                                 </div>
                             </motion.div>

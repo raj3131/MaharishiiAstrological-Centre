@@ -30,11 +30,11 @@ export default function Hero() {
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-left space-y-6"
+                    className="text-left space-y-4 md:space-y-6"
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 border border-[var(--color-3)]/30 text-[var(--color-3)] rounded-full text-sm font-bold shadow-sm backdrop-blur-sm">
-                        <Sparkles className="w-4 h-4 fill-current animate-pulse text-[var(--color-2)]" />
-                        <span className="tracking-wider uppercase text-xs">Pioneer in DNA Astrology</span>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-white/60 border border-[var(--color-3)]/30 text-[var(--color-3)] rounded-full text-[10px] md:text-sm font-bold shadow-sm backdrop-blur-sm">
+                        <Sparkles className="w-3 h-3 md:w-4 md:h-4 fill-current animate-pulse text-[var(--color-2)]" />
+                        <span className="tracking-wider uppercase">Pioneer in DNA Astrology</span>
                     </div>
 
                     <h1 className="heading-xl tracking-widest text-[var(--foreground)] leading-tight font-serif">
@@ -43,79 +43,72 @@ export default function Hero() {
                         With DNA Astrology
                     </h1>
 
-                    <p className="text-lg text-[var(--color-4)] max-w-lg font-medium leading-relaxed">
+                    <p className="text-base md:text-lg text-[var(--color-4)] max-w-lg font-medium leading-relaxed">
                         Unveil the cosmic blueprint hidden in your lineage. Maharishii Astrological Centre specializes in DNA Astrology to heal ancestral patterns and align your genetic destiny.
                     </p>
 
                     {/* Action buttons removed as requested */}
 
-                    <div className="grid grid-cols-3 md:flex items-center gap-4 md:gap-8 pt-6 border-t border-[var(--color-2)]/20">
+                    <div className="grid grid-cols-3 gap-2 md:gap-8 pt-6 border-t border-[var(--color-2)]/20">
                         <div>
-                            <h4 className="text-3xl font-bold text-[var(--foreground)] font-serif">10k+</h4>
-                            <p className="text-sm text-[var(--color-4)] uppercase tracking-wider">Kundalis Read</p>
+                            <h4 className="text-xl md:text-3xl font-bold text-[var(--foreground)] font-serif">10k+</h4>
+                            <p className="text-[10px] md:text-sm text-[var(--color-4)] uppercase tracking-wider">Kundalis</p>
                         </div>
                         <div>
-                            <h4 className="text-3xl font-bold text-[var(--foreground)] font-serif">99%</h4>
-                            <p className="text-sm text-[var(--color-4)] uppercase tracking-wider">Alignment</p>
+                            <h4 className="text-xl md:text-3xl font-bold text-[var(--foreground)] font-serif">99%</h4>
+                            <p className="text-[10px] md:text-sm text-[var(--color-4)] uppercase tracking-wider">Alignment</p>
                         </div>
                         <div>
-                            <h4 className="text-3xl font-bold text-[var(--foreground)] font-serif">Vedic</h4>
-                            <p className="text-sm text-[var(--color-4)] uppercase tracking-wider">Certified</p>
+                            <h4 className="text-xl md:text-3xl font-bold text-[var(--foreground)] font-serif">Vedic</h4>
+                            <p className="text-[10px] md:text-sm text-[var(--color-4)] uppercase tracking-wider">Certified</p>
                         </div>
                     </div>
                 </motion.div>
 
                 {/* Hero Visual - Mystical/Astrological */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.2, type: "spring" }}
-                    className="relative h-[600px] w-full hidden lg:flex items-center justify-center"
+                    transition={{ duration: 1, type: "spring" }}
+                    className="relative h-[300px] sm:h-[400px] lg:h-[600px] w-full flex items-center justify-center"
                 >
                     {/* Central Planet / Crystal Ball visual */}
-                    <div className="relative w-[500px] h-[500px]">
+                    <div className="relative w-[280px] h-[280px] sm:w-[500px] sm:h-[500px]">
                         {/* Glowing Aura */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-1)] to-[var(--color-2)] rounded-full blur-[80px] opacity-30 animate-pulse" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-1)] to-[var(--color-2)] rounded-full blur-[40px] md:blur-[80px] opacity-30 animate-pulse" />
 
                         {/* Main Image Container */}
-                        <div className="absolute inset-4 rounded-full overflow-hidden border-2 border-[var(--color-2)] shadow-2xl ring-4 ring-[var(--color-5)]/20">
+                        <div className="absolute inset-2 md:inset-4 rounded-full overflow-hidden border-2 border-[var(--color-2)] shadow-2xl ring-2 md:ring-4 ring-[var(--color-5)]/20">
                             <div className="absolute inset-0 bg-white">
                                 <img
                                     src="/images/ae0dd8a0-7e68-498b-b41a-5ede03d89f7a.jpg"
                                     alt="DNA Astrology Master"
-                                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-[10s]"
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
                         </div>
 
-                        {/* Orbiting Elements */}
+                        {/* Orbiting Elements - Simplified for mobile */}
                         <motion.div
                             animate={{ rotate: 360 }}
-                            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                            className="absolute inset-0 rounded-full border border-[var(--color-3)]/20 border-dotted"
-                        >
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-[var(--color-3)] rounded-full shadow-md border border-white" />
-                        </motion.div>
+                            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                            className="absolute inset-0 rounded-full border border-[var(--color-3)]/10 border-dotted"
+                        />
 
                         <motion.div
                             animate={{ rotate: -360 }}
-                            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                            className="absolute inset-12 rounded-full border border border-[var(--color-2)]/30 border-dashed"
-                        >
-                            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center border border-[var(--color-2)]">
-                                <Moon className="w-4 h-4 text-[var(--color-3)] fill-current" />
-                            </div>
-                        </motion.div>
+                            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                            className="absolute inset-8 md:inset-12 rounded-full border border border-[var(--color-2)]/20 border-dashed"
+                        />
 
-                        {/* Floating Card */}
+                        {/* Floating Card - Hidden on very small screens or made smaller */}
                         <motion.div
-                            animate={{ y: [0, -15, 0] }}
-                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute bottom-10 -left-10 bg-white/90 backdrop-blur-xl border border-[var(--color-1)] p-6 rounded-2xl shadow-xl max-w-[240px]"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="absolute -bottom-4 -left-4 md:bottom-10 md:-left-10 bg-white/95 backdrop-blur-xl border border-[var(--color-1)] p-3 md:p-6 rounded-xl md:rounded-2xl shadow-xl max-w-[160px] md:max-w-[240px] z-20"
                         >
-                            <div className="flex gap-1 text-[var(--color-5)] mb-2">★★★★★</div>
-                            <p className="text-sm font-medium text-[var(--foreground)] italic">"The planetary alignment guidance changed my career path completely."</p>
-                            <p className="text-muted mt-2 text-right">- Anjali R.</p>
+                            <div className="flex gap-1 text-[var(--color-5)] mb-1 text-[8px] md:text-xs">★★★★★</div>
+                            <p className="text-[10px] md:text-sm font-medium text-[var(--foreground)] italic leading-tight">"The guidance changed my career path."</p>
                         </motion.div>
                     </div>
                 </motion.div>
