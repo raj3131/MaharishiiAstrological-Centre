@@ -19,13 +19,13 @@ export default function Navbar() {
     const navBackground = useTransform(
         scrollY,
         [0, 50],
-        ["rgba(255, 253, 247, 0)", "rgba(255, 253, 247, 0.95)"] // Warm white with transparency
+        ["rgba(19, 16, 13, 0)", "rgba(19, 16, 13, 0.95)"]
     );
 
     const navShadow = useTransform(
         scrollY,
         [0, 50],
-        ["none", "0 10px 30px -10px rgba(164, 108, 76, 0.1)"] // Soft brown shadow
+        ["none", "0 10px 40px -10px rgba(0, 0, 0, 0.5)"]
     );
 
     return (
@@ -64,7 +64,7 @@ export default function Navbar() {
                         >
                             <Link
                                 href={`#${item.toLowerCase().replace(' ', '-')}`}
-                                className="text-base font-medium text-[var(--foreground)] hover:text-[var(--color-3)] transition-colors relative group py-2 tracking-wide"
+                                className="text-base font-medium text-[var(--foreground)] opacity-80 hover:opacity-100 hover:text-[var(--color-3)] transition-all relative group py-2 tracking-wide"
                             >
                                 {item}
                                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--color-3)] transition-all duration-300 group-hover:w-full" />
@@ -111,7 +111,7 @@ export default function Navbar() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="fixed inset-0 bg-[#FFFDF7] z-[60] flex flex-col lg:hidden"
+                            className="fixed inset-0 bg-[#13100D] z-[60] flex flex-col lg:hidden"
                         >
                             <div className="flex flex-col h-full w-full p-8 pt-24 overflow-y-auto relative">
                                 <span className="text-[var(--color-3)] font-bold uppercase tracking-[0.2em] text-[10px] mb-10 block opacity-50">Navigation Directory</span>

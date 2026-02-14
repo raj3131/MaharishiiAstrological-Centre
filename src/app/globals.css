@@ -3,33 +3,32 @@
 @tailwind utilities;
 
 :root {
-  /* User Provided Palette */
-  --color-1: #FBD773;
-  /* Light Yellow / Background accents */
-  --color-2: #CA844A;
-  /* Bronze / Secondary */
-  --color-3: #AC4418;
-  /* Rust / Primary Strong */
-  --color-4: #A46C4C;
-  /* Muted Brown / Text */
-  --color-5: #E4B04A;
-  /* Gold / Highlights */
+  /* Royal Dark Vedic Palette */
+  --color-1: #241F1C;
+  /* Deep Base / Card BG */
+  --color-2: #CD7F32;
+  /* Bronze / Accents */
+  --color-3: #D4AF37;
+  /* Gold / Primary Highlights */
+  --color-4: #A0907A;
+  /* Muted Sand / Sub-text */
+  --color-5: #FFD700;
+  /* Pure Gold / Interaction */
 
-  --background: #FFFDF7;
-  /* Very light warm cream for main background to ensure readability */
-  --foreground: #3E2C22;
-  /* Dark Brown for text (for contrast against light bg) */
+  --background: #13100D;
+  /* Deep Charcoal Brown */
+  --foreground: #F5E6D3;
+  /* Warm Off-white / Text */
 
-  --primary: #AC4418;
-  --primary-light: #CA844A;
-  --secondary: #FBD773;
-  --accent: #E4B04A;
-  --muted: #A46C4C;
+  --primary: #D4AF37;
+  --primary-light: #CD7F32;
+  --secondary: #241F1C;
+  --accent: #FFD700;
+  --muted: #A0907A;
 
-  --card-bg: #FFFFFF;
-  --border-color: #E4B04A;
+  --card-bg: #1A1613;
+  --border-color: #D4AF37;
 
-  /* --font-heading: 'Samarkan', cursive; */
   --font-heading: var(--font-cinzel), serif;
   --font-body: var(--font-geist-sans), sans-serif;
   --font-accent: var(--font-rozha), serif;
@@ -37,9 +36,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Force Light/Warm Theme as requested */
-    --background: #FFFDF7;
-    --foreground: #3E2C22;
+    --background: #13100D;
+    --foreground: #F5E6D3;
   }
 }
 
@@ -72,8 +70,8 @@ body {
   position: relative;
   /* mandala texture background */
   background-image:
-    radial-gradient(circle at 100% 0%, rgba(251, 215, 115, 0.2) 0%, transparent 20%),
-    radial-gradient(circle at 0% 100%, rgba(172, 68, 24, 0.1) 0%, transparent 20%);
+    radial-gradient(circle at 100% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 25%),
+    radial-gradient(circle at 0% 100%, rgba(205, 127, 50, 0.05) 0%, transparent 25%);
 }
 
 h1,

@@ -51,13 +51,13 @@ export default function Testimonials() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.2 }}
                             viewport={{ once: true }}
-                            className="relative bg-white/50 p-8 rounded-t-3xl rounded-br-3xl border border-[var(--color-1)] hover:border-[var(--color-3)] transition-all duration-500 backdrop-blur-md group hover:bg-white hover:shadow-xl"
+                            className="relative bg-[var(--card-bg)]/50 p-8 rounded-t-3xl rounded-br-3xl border border-[var(--color-3)]/10 hover:border-[var(--color-3)]/40 transition-all duration-500 backdrop-blur-md group hover:bg-[var(--card-bg)] hover:shadow-2xl"
                         >
-                            <Quote className="absolute top-6 right-6 w-10 h-10 text-[var(--color-1)] group-hover:text-[var(--color-2)] transition-colors rotate-180" />
+                            <Quote className="absolute top-6 right-6 w-10 h-10 text-[var(--color-3)]/20 group-hover:text-[var(--color-3)]/40 transition-colors rotate-180" />
 
                             <div className="flex items-center gap-4 mb-8">
-                                <div className="relative w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-[var(--color-3)] to-[var(--color-1)]">
-                                    <div className="w-full h-full rounded-full overflow-hidden relative bg-white">
+                                <div className="relative w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-[var(--color-3)] to-[var(--color-2)]">
+                                    <div className="w-full h-full rounded-full overflow-hidden relative bg-[var(--background)]">
                                         <Image
                                             src={testimonial.image}
                                             alt={testimonial.name}
