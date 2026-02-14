@@ -46,9 +46,9 @@ export default function Navbar() {
                         <div className="w-10 h-10 bg-[var(--color-3)] text-white rounded-lg flex items-center justify-center font-bold text-xl group-hover:rotate-45 transition-transform shadow-md">
                             <Compass className="w-6 h-6 animate-pulse" />
                         </div>
-                        <div className="flex flex-col leading-tight">
-                            <span className="text-xl font-bold tracking-widest text-[var(--foreground)] font-serif">Maharishii</span>
-                            <span className="text-sm font-medium text-[var(--color-3)] -mt-1 font-serif uppercase tracking-[0.2em]">Astrological Centre</span>
+                        <div className="flex flex-col leading-none">
+                            <span className="text-lg md:text-xl font-bold tracking-widest text-[var(--foreground)] font-serif">Maharishii</span>
+                            <span className="text-[10px] md:text-sm font-medium text-[var(--color-3)] font-serif uppercase tracking-[0.2em]">Astrological Centre</span>
                         </div>
                     </motion.div>
                 </Link>
@@ -85,7 +85,7 @@ export default function Navbar() {
                         href="https://wa.me/919876543210"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-primary px-6 py-2 h-12 text-sm uppercase tracking-wide shadow-md flex items-center gap-2"
+                        className="btn btn-primary px-4 py-2 h-10 md:px-6 md:h-12 text-xs md:text-sm uppercase tracking-wide shadow-md flex items-center gap-2"
                     >
                         <MessageCircle className="w-5 h-5 fill-current" />
                         Consult Now

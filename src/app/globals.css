@@ -119,23 +119,34 @@ a {
 }
 
 .heading-xl {
-  font-size: clamp(2rem, 8vw, 4rem);
+  font-size: clamp(2rem, 7vw, 4.5rem);
   font-weight: 800;
   line-height: 1.1;
 }
 
 @media (max-width: 768px) {
   .heading-xl {
-    font-size: 2.2rem;
-    letter-spacing: 0.05em;
+    font-size: 1.8rem !important;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
   }
 
   h2 {
-    font-size: 1.8rem !important;
+    font-size: 1.4rem !important;
+    letter-spacing: 0.02em !important;
   }
 
   h3 {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
+  }
+
+  p {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .container {
+    padding: 0 16px !important;
   }
 }
 
@@ -143,20 +154,20 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 28px;
+  padding: 12px 24px;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   border: none;
-  gap: 10px;
+  gap: 8px;
 }
 
 @media (max-width: 640px) {
   .btn {
-    padding: 12px 24px;
-    font-size: 0.9rem;
+    padding: 10px 20px;
+    font-size: 0.85rem;
   }
 }
 

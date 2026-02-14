@@ -51,15 +51,15 @@ export default function Hero() {
 
                     <div className="grid grid-cols-3 gap-2 md:gap-8 pt-6 border-t border-[var(--color-2)]/20">
                         <div>
-                            <h4 className="text-xl md:text-3xl font-bold text-[var(--foreground)] font-serif">10k+</h4>
+                            <h4 className="text-lg md:text-3xl font-bold text-[var(--foreground)] font-serif">10k+</h4>
                             <p className="text-[10px] md:text-sm text-[var(--color-4)] uppercase tracking-wider">Kundalis</p>
                         </div>
                         <div>
-                            <h4 className="text-xl md:text-3xl font-bold text-[var(--foreground)] font-serif">99%</h4>
+                            <h4 className="text-lg md:text-3xl font-bold text-[var(--foreground)] font-serif">99%</h4>
                             <p className="text-[10px] md:text-sm text-[var(--color-4)] uppercase tracking-wider">Alignment</p>
                         </div>
                         <div>
-                            <h4 className="text-xl md:text-3xl font-bold text-[var(--foreground)] font-serif">Vedic</h4>
+                            <h4 className="text-lg md:text-3xl font-bold text-[var(--foreground)] font-serif">Vedic</h4>
                             <p className="text-[10px] md:text-sm text-[var(--color-4)] uppercase tracking-wider">Certified</p>
                         </div>
                     </div>
