@@ -66,14 +66,14 @@ export default function ProductShowcase({ products = [] }: ProductShowcaseProps)
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-50px" }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+                    className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8"
                 >
                     {products.map((product) => (
                         <Link href={`/products/${product.id}`} key={product.id}>
                             <motion.div variants={itemVariants} className="group relative bg-white rounded-3xl overflow-hidden border border-[var(--color-2)]/20 hover:border-[var(--color-3)] transition-all duration-500 hover:shadow-[0_20px_40px_-5px_rgba(172,68,24,0.15)] cursor-pointer">
 
                                 {/* Image */}
-                                <div className="h-[320px] w-full relative overflow-hidden bg-[var(--color-1)]/10">
+                                <div className="h-[200px] md:h-[280px] w-full relative overflow-hidden bg-[var(--color-1)]/10">
                                     <Image
                                         src={product.image}
                                         alt={product.name}
@@ -93,20 +93,20 @@ export default function ProductShowcase({ products = [] }: ProductShowcaseProps)
                                 </div>
 
                                 {/* Content */}
-                                <div className="p-6 relative bg-white">
-                                    <div className="flex justify-between items-start mb-2">
-                                        <h3 className="text-2xl font-serif text-[var(--foreground)] group-hover:text-[var(--color-3)] transition-colors cursor-pointer tracking-wide">{product.name}</h3>
-                                        <div className="flex flex-col items-end">
-                                            <span className="text-xl font-bold text-[var(--color-5)] font-serif">₹{product.price}</span>
+                                <div className="p-4 md:p-6 relative bg-white">
+                                    <div className="flex flex-col gap-1 mb-2">
+                                        <h3 className="text-lg md:text-xl font-serif text-[var(--foreground)] group-hover:text-[var(--color-3)] transition-colors cursor-pointer tracking-wide truncate">{product.name}</h3>
+                                        <div className="flex justify-between items-center">
+                                            <span className="text-base md:text-lg font-bold text-[var(--color-5)] font-serif">₹{product.price}</span>
                                             <div className="flex items-center gap-1 text-[var(--color-3)] text-xs">
                                                 <Star className="w-3 h-3 fill-current" />
                                                 <span>4.9</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="w-full h-[1px] bg-gradient-to-r from-[var(--color-1)] to-transparent my-4" />
-                                    <p className="text-[var(--color-4)] text-sm line-clamp-2 italic font-light">
-                                        Blessed by Vedic priests to ensure purity and potency.
+                                    <div className="w-full h-[1px] bg-gradient-to-r from-[var(--color-1)] to-transparent my-3 md:my-4" />
+                                    <p className="text-[var(--color-4)] text-[10px] md:text-sm line-clamp-1 italic font-light">
+                                        Blessed for purity and potency.
                                     </p>
                                 </div>
                             </motion.div>

@@ -55,7 +55,7 @@ export default function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className="hidden lg:flex items-center gap-10">
-                    {["Services", "Sacred Tools", "Horoscope", "About"].map((item, i) => (
+                    {["Services", "Products", "Horoscope", "About"].map((item, i) => (
                         <motion.div
                             key={item}
                             initial={{ opacity: 0, y: -20 }}
@@ -114,7 +114,7 @@ export default function Navbar() {
                         >
                             <div className="absolute inset-0 bg-[#FFFDF7] pointer-events-none" />
 
-                            {["Services", "Sacred Tools", "Horoscope", "About", "Contact"].map((item, i) => (
+                            {["Services", "Products", "Horoscope", "About"].map((item, i) => (
                                 <motion.div
                                     key={item}
                                     initial={{ opacity: 0, y: 20 }}
@@ -125,7 +125,7 @@ export default function Navbar() {
                                     <Link
                                         href={`#${item.toLowerCase().replace(' ', '-')}`}
                                         onClick={() => setIsOpen(false)}
-                                        className="text-4xl font-bold text-[var(--foreground)] hover:text-[var(--color-3)] transition-colors tracking-widest font-serif"
+                                        className="text-3xl font-bold text-[var(--foreground)] hover:text-[var(--color-3)] transition-colors tracking-widest font-serif"
                                     >
                                         {item}
                                     </Link>
