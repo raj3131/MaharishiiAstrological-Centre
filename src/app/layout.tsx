@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Yatra_One, Rozha_One } from "next/font/google";
+import { Geist, Geist_Mono, Yatra_One, Rozha_One, Cinzel } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -27,6 +27,11 @@ const rozhaOne = Rozha_One({
   subsets: ["latin"],
 });
 
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+});
+
 export const metadata: Metadata = {
   title: "DNA Astrology | Maharishii Astrological Centre - Ancestral Karma & Genetic Blueprint Analysis",
   description: "Maharishii Astrological Centre specializes in DNA Astrology, decoding your ancestral karma and genetic blueprint. Discover your family lineage's cosmic influence and heal inherited patterns with expert Vedic insights.",
@@ -41,9 +46,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link href="https://fonts.cdnfonts.com/css/samarkan" rel="stylesheet" />
+        {/* <link href="https://fonts.cdnfonts.com/css/samarkan" rel="stylesheet" /> */}
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${yatraOne.variable} ${rozhaOne.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${yatraOne.variable} ${rozhaOne.variable} ${cinzel.variable}`}>
         <SmoothScroll />
         <div className="grid-bg" />
         <Navbar />

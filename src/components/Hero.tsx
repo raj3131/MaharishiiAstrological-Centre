@@ -1,33 +1,36 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Play, Sparkles, Moon } from "lucide-react";
+import { Sparkles, Moon } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="min-h-screen pt-32 flex items-center justify-center relative overflow-hidden bg-[var(--background)] text-[var(--foreground)]">
-            {/* Background Texture */}
-            <div className="absolute inset-0 z-0 bg-gradient-animate pointer-events-none opacity-40" />
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-pixels.png')] opacity-30 pointer-events-none" />
+        <section className="min-h-screen pt-24 pb-12 flex items-center justify-center relative bg-[var(--background)] text-[var(--foreground)]">
+            {/* Background Wrapper with isolated overflow */}
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                {/* Background Texture */}
+                <div className="absolute inset-0 bg-gradient-animate opacity-40" />
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-pixels.png')] opacity-30" />
 
-            {/* Rotating Background Mandala - Warm tones */}
-            <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] rounded-full border border-[var(--color-1)] opacity-30 z-0 border-dashed"
-            />
-            <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 180, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-[15%] -right-[5%] w-[600px] h-[600px] rounded-full border border border-[var(--color-2)] opacity-30 z-0"
-            />
+                {/* Rotating Background Mandala - Warm tones */}
+                <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
+                    className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] rounded-full border border-[var(--color-1)] opacity-30 border-dashed"
+                />
+                <motion.div
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 180, repeat: Infinity, ease: "linear" }}
+                    className="absolute -top-[15%] -right-[5%] w-[600px] h-[600px] rounded-full border border border-[var(--color-2)] opacity-30"
+                />
+            </div>
 
             <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-left space-y-8"
+                    className="text-left space-y-6"
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 border border-[var(--color-3)]/30 text-[var(--color-3)] rounded-full text-sm font-bold shadow-sm backdrop-blur-sm">
                         <Sparkles className="w-4 h-4 fill-current animate-pulse text-[var(--color-2)]" />
@@ -40,29 +43,13 @@ export default function Hero() {
                         With DNA Astrology
                     </h1>
 
-                    <p className="text-xl text-[var(--color-4)] max-w-lg font-medium leading-relaxed">
+                    <p className="text-lg text-[var(--color-4)] max-w-lg font-medium leading-relaxed">
                         Unveil the cosmic blueprint hidden in your lineage. Maharishii Astrological Centre specializes in DNA Astrology to heal ancestral patterns and align your genetic destiny.
                     </p>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4 }}
-                        className="flex flex-wrap gap-4"
-                    >
-                        <button className="btn btn-primary group px-8 py-4 text-lg">
-                            DNA Karma Analysis
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </button>
-                        <button className="flex items-center gap-4 group px-6 py-4 rounded-full hover:bg-[var(--color-1)]/20 border border-transparent hover:border-[var(--color-3)]/30 transition-all cursor-pointer">
-                            <div className="w-12 h-12 bg-[var(--color-2)]/10 rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
-                                <Play className="w-5 h-5 ml-1 fill-[var(--color-3)] text-[var(--color-3)]" />
-                            </div>
-                            <span className="font-bold text-[var(--foreground)] group-hover:text-[var(--color-3)] transition-colors tracking-wide">Watch Rituals</span>
-                        </button>
-                    </motion.div>
+                    {/* Action buttons removed as requested */}
 
-                    <div className="flex items-center gap-8 pt-8 border-t border-[var(--color-2)]/20">
+                    <div className="flex items-center gap-8 pt-6 border-t border-[var(--color-2)]/20">
                         <div>
                             <h4 className="text-3xl font-bold text-[var(--foreground)] font-serif">10k+</h4>
                             <p className="text-sm text-[var(--color-4)] uppercase tracking-wider">Kundalis Read</p>
@@ -91,8 +78,14 @@ export default function Hero() {
                         <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-1)] to-[var(--color-2)] rounded-full blur-[80px] opacity-30 animate-pulse" />
 
                         {/* Main Image Container */}
-                        <div className="absolute inset-4 rounded-full overflow-hidden border-4 border-white/80 shadow-2xl ring-1 ring-[var(--color-5)]">
-                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1599707367072-cd6ad6e33258?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center hover:scale-110 transition-transform duration-[10s]" />
+                        <div className="absolute inset-4 rounded-full overflow-hidden border-2 border-[var(--color-2)] shadow-2xl ring-4 ring-[var(--color-5)]/20">
+                            <div className="absolute inset-0 bg-white">
+                                <img
+                                    src="/images/ae0dd8a0-7e68-498b-b41a-5ede03d89f7a.jpg"
+                                    alt="DNA Astrology Master"
+                                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-[10s]"
+                                />
+                            </div>
                         </div>
 
                         {/* Orbiting Elements */}

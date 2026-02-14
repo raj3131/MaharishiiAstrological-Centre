@@ -29,7 +29,8 @@
   --card-bg: #FFFFFF;
   --border-color: #E4B04A;
 
-  --font-heading: 'Samarkan', cursive;
+  /* --font-heading: 'Samarkan', cursive; */
+  --font-heading: var(--font-cinzel), serif;
   --font-body: var(--font-geist-sans), sans-serif;
   --font-accent: var(--font-rozha), serif;
 }
@@ -78,20 +79,7 @@ h6 {
   letter-spacing: 0.1em;
 }
 
-/* Enhanced Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-
-  * {
-    scroll-behavior: smooth;
-  }
-}
+/* Remove scroll-behavior: smooth as it conflicts with Lenis */
 
 a {
   color: inherit;
@@ -126,13 +114,14 @@ a {
 .text-gradient {
   background: linear-gradient(135deg, var(--color-3) 0%, var(--color-2) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .heading-xl {
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 .btn {

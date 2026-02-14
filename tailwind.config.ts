@@ -13,9 +13,11 @@ const config: Config = {
                 foreground: "var(--foreground)",
             },
             fontFamily: {
-                serif: ["Samarkan", "serif"],
+                // serif: ["Samarkan", "serif"],
+                serif: ["var(--font-cinzel)", "serif"],
                 sans: ["var(--font-geist-sans)", "sans-serif"],
-                heading: ["Samarkan", "cursive"],
+                // heading: ["Samarkan", "cursive"],
+                heading: ["var(--font-cinzel)", "serif"],
                 accent: ["var(--font-rozha)", "serif"],
             },
         },
