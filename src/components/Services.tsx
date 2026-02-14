@@ -54,7 +54,7 @@ export default function Services() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1, duration: 0.5 }}
                                 viewport={{ once: true, margin: "-50px" }}
-                                className="group relative p-8 bg-[var(--color-1)]/10 backdrop-blur-md border border-[var(--color-3)]/10 rounded-2xl hover:border-[var(--color-3)]/40 transition-all duration-300 overflow-hidden shadow-xl hover:shadow-[0_10px_40px_rgba(212,175,55,0.05)]"
+                                className="group relative p-8 bg-white border border-[var(--color-3)]/10 rounded-2xl hover:border-[var(--color-3)]/40 transition-all duration-300 overflow-hidden shadow-sm hover:shadow-xl"
                             >
                                 {/* Hover Glow - Hidden on mobile for performance */}
                                 <div className="absolute -inset-[100%] bg-gradient-to-br from-transparent via-[var(--color-1)]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl rounded-full translate-x-12 translate-y-12 hidden md:block" />

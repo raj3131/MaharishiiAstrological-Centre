@@ -3,31 +3,31 @@
 @tailwind utilities;
 
 :root {
-  /* Royal Dark Vedic Palette */
-  --color-1: #241F1C;
-  /* Deep Base / Card BG */
-  --color-2: #CD7F32;
-  /* Bronze / Accents */
-  --color-3: #D4AF37;
-  /* Gold / Primary Highlights */
-  --color-4: #A0907A;
-  /* Muted Sand / Sub-text */
-  --color-5: #FFD700;
-  /* Pure Gold / Interaction */
+  /* Enriched Vedic Palette - High Contrast on Light */
+  --color-1: #FBD773;
+  /* Gold Accent */
+  --color-2: #B06935;
+  /* Bold Bronze */
+  --color-3: #8B3411;
+  /* Deep Rust / Primary UI */
+  --color-4: #4A3728;
+  /* Espresso / Text secondary */
+  --color-5: #D4AF37;
+  /* Metallic Gold */
 
-  --background: #13100D;
-  /* Deep Charcoal Brown */
-  --foreground: #F5E6D3;
-  /* Warm Off-white / Text */
+  --background: #FFFDF7;
+  /* Warm Light Cream */
+  --foreground: #2D1E17;
+  /* Noble Dark Brown */
 
-  --primary: #D4AF37;
-  --primary-light: #CD7F32;
-  --secondary: #241F1C;
-  --accent: #FFD700;
-  --muted: #A0907A;
+  --primary: #8B3411;
+  --primary-light: #B06935;
+  --secondary: #FBD773;
+  --accent: #D4AF37;
+  --muted: #4A3728;
 
-  --card-bg: #1A1613;
-  --border-color: #D4AF37;
+  --card-bg: #FFFFFF;
+  --border-color: #8B3411;
 
   --font-heading: var(--font-cinzel), serif;
   --font-body: var(--font-geist-sans), sans-serif;
@@ -36,8 +36,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #13100D;
-    --foreground: #F5E6D3;
+    --background: #FFFDF7;
+    --foreground: #2D1E17;
   }
 }
 
